@@ -9,11 +9,11 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public record Interval(int slot) {
 
-    public static final int SLOT_PER_DAY = 48;
+    public static final int SLOTS_PER_DAY = 48;
     public static final int MINUTES_PER_SLOT = 30;
 
     public Interval {
-        if (slot < 1 || slot > SLOT_PER_DAY) {
+        if (slot < 1 || slot > SLOTS_PER_DAY) {
             throw new InvalidInputException("Slot out of range: " + slot);
         }
     }
