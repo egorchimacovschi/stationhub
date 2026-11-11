@@ -1,0 +1,32 @@
+# Maven build output
+target/
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven wrapper (keep mvnw/mvnw.cmd, ignore the jar it downloads)
+.mvn/wrapper/maven-wrapper.jar
+
+# Log files
+*.log
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Environment / secrets (if you ever add any)
+.env

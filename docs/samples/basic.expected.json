@@ -1,0 +1,97 @@
+[ {
+  "command" : "query",
+  "timestamp" : "2026-03-10T00:33",
+  "status" : "OK",
+  "from" : "2026-03-10T00:00",
+  "to" : "2026-03-10T00:30",
+  "days" : [ {
+    "stream" : "TEMPERATURE",
+    "date" : "2026-03-10",
+    "readings" : [ {
+      "interval" : "00:00 - 00:30",
+      "slot" : 1,
+      "celsius" : 4.2
+    } ]
+  } ]
+}, {
+  "command" : "publish",
+  "timestamp" : "2026-03-10T01:00",
+  "status" : "REJECTED",
+  "stream" : "TEMPERATURE",
+  "date" : "2026-03-10",
+  "interval" : "00:30 - 01:00",
+  "slot" : 2,
+  "reason" : "Celsius 75.0 is outside the allowed range [-60, 60]; reading skipped."
+}, {
+  "command" : "query",
+  "timestamp" : "2026-03-10T01:01",
+  "status" : "MISSING",
+  "from" : "2026-03-10T00:30",
+  "to" : "2026-03-10T01:00",
+  "days" : null,
+  "reason" : "No reading yet. Try again later."
+}, {
+  "command" : "correct",
+  "timestamp" : "2026-03-10T02:10",
+  "status" : "REJECTED",
+  "stream" : "AIR_QUALITY",
+  "date" : "2026-03-10",
+  "interval" : "00:00 - 00:30",
+  "slot" : 1,
+  "reason" : "Pm25 -3.0 is below the minimum 0; reading skipped."
+}, {
+  "command" : "query",
+  "timestamp" : "2026-03-10T02:11",
+  "status" : "OK",
+  "from" : "2026-03-10T00:00",
+  "to" : "2026-03-10T02:00",
+  "days" : [ {
+    "stream" : "TEMPERATURE",
+    "date" : "2026-03-10",
+    "readings" : [ {
+      "interval" : "00:00 - 00:30",
+      "slot" : 1,
+      "celsius" : 4.2
+    }, {
+      "interval" : "00:30 - 01:00",
+      "slot" : 2,
+      "celsius" : 4.8
+    }, {
+      "interval" : "01:00 - 01:30",
+      "slot" : 3,
+      "celsius" : 5.0
+    } ]
+  } ]
+}, {
+  "command" : "query",
+  "timestamp" : "2026-03-10T02:12",
+  "status" : "DENIED",
+  "from" : "2026-03-10T01:30",
+  "to" : "2026-03-10T02:00",
+  "reason" : "Access denied: TEMPERATURE_FORECAST requires a PRO plan."
+}, {
+  "command" : "query",
+  "timestamp" : "2026-03-10T02:13",
+  "status" : "OK",
+  "from" : "2026-03-10T01:30",
+  "to" : "2026-03-10T02:00",
+  "days" : [ {
+    "stream" : "TEMPERATURE_FORECAST",
+    "date" : "2026-03-10",
+    "readings" : [ {
+      "interval" : "01:30 - 02:00",
+      "slot" : 4,
+      "celsius" : 5.5,
+      "confidence" : 0.8
+    } ]
+  } ]
+}, {
+  "command" : "query",
+  "timestamp" : "2026-03-10T02:14",
+  "status" : "MISSING",
+  "from" : "2026-03-10T02:14",
+  "to" : "2026-03-10T02:14",
+  "days" : null,
+  "reason" : "No reading yet. Try again later."
+} ]
+
